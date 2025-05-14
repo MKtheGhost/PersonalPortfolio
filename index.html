@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MKdevspace</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=K2D:wght@300;400;600&display=swap" rel="stylesheet" />
+  <title>MKdevspace</title>
 </head>
 <body>
+  <div class="wrapper">
     <div class="container">
-        <div class="navbar">
-            <ul>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contacts</li>
-            </ul>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#"><img class="navbar-icon" src="./images/rocket.png" alt="rocket" /></a>
         </div>
+        <div class="navbar-icons">
+          <a href="./about.html"><img class="navbar-icon" src="./images/id.png" alt="id" /></a>
+          <a href="./projects.html"><img class="navbar-icon" src="./images/console.png" alt="console" /></a>
+          <a href="./contacts.html"><img class="navbar-icon" src="./images/textbubble.png" alt="text bubble" /></a>
+        </div>
+      </div>
 
+      <div class="content">
         <div class="presentation">
-            <div class="presentation-text">
-                <h1>Welcome to my devspace!</h1>
-                <p>paragraph about stuff about me</p>
+          <div class="presentation-text">
+            <h1>WELCOME TO MY DEVSPACE</h1>
+            <p>
+              Welcome — I’m MK, and you’ve landed in my corner of the internet! This website is a reflection of my work, passions, and projects. Feel free to explore and get to know my world!
+            </p>
+            <div class="presentation-project">
+                <h3>MY LATEST PROJECTS :</h3>
+                <div class="projects-grid">
+                <div class="project-card"></div>
+                <div class="project-card"></div>
+                <div class="project-card"></div>
+                </div>
             </div>
+          </div>
 
-            <div class="presentation-icon">
-                <button>left</button>
-                <div class="presentation-img"></div>
-                <button>right</button>
-            </div>
+          <div class="presentation-icon">
+            <button><img src="/images/Polygon 1.png" alt=""></button>
+            <div class="presentation-img"></div>
+            <button><img src="/images/Polygon 2.png" alt=""></button>
+          </div>
         </div>
 
-        <div class="presentation-stat">
-            <!---------- Filled with JS --------------->
-        </div> 
-
-
+        <div class="project-details"></div>
+      </div>
     </div>
-    
+  </div>
 </body>
 </html>

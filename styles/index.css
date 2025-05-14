@@ -1,4 +1,291 @@
 body {
-    margin : 0;
-    padding : 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'K2D', sans-serif;
+  background-color: #fff;
+  color: #000;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 85vh;
+  box-sizing: border-box;
+  border-radius: 32px;
+  margin : 20px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  min-width: 60px;
+  border-radius: 15px;
+  border: 4px solid black;
+  padding: 10px 5px;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.navbar-icon {
+  width: 35px;
+  height: auto;
+  padding: 5px;
+}
+
+.logo {
+  margin-top: 10px;
+}
+
+.navbar-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.presentation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.presentation-text {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+.presentation-text h1 {
+  font-family: 'Jua', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.presentation-text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.presentation-text h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex: 1 1 100px;
+  max-width: 150px;
+  height: 150px;
+  background-color: #ddd;
+  border: 4px solid black;
+  border-radius: 15px;
+}
+
+.project-details {
+  height: 200px;
+  background-color: #ddd;
+  border: 4px solid black;
+  border-radius: 15px;
+}
+
+.presentation-icon {
+  flex: 1 1 40%;
+  min-width: 260px;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.presentation-img {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 15px;
+}
+
+.presentation-icon button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1366px) {
+  * {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  body {
+    padding: 0;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 4px solid black;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navbar-icons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .presentation-text, .presentation-icon {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .projects-grid {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .project-card {
+    flex: 0 1 150px;
+    max-width: 150px;
+    height: 150px;
+    margin: auto;
+  }
+
+  .project-details {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 500px;
+  }
+
+  .wrapper {
+    border: 4px solid black;
+  }
+}
+
+@media (max-width: 600px) {
+  * {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  body {
+    padding: 0;
+  }
+
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 15px;
+    border: 3px solid black;
+  }
+
+  .projects-grid {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .project-card {
+    flex: 0 1 100px;
+    max-width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: auto;
+  }
+
+  .presentation-img {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+  }
+
+  .presentation-icon button {
+    font-size: 20px;
+  }
+
+  .presentation-text h1 {
+    font-size: 28px;
+  }
+
+  .presentation-text p,
+  .presentation-text h3 {
+    font-size: 18px;
+  }
+
+  .navbar-icon {
+    width: 30px;
+  }
+
+  .project-details {
+    border: 3px solid black;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .wrapper {
+    border: 3px solid black;
+  }
+}
+
+
