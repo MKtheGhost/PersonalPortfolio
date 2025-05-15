@@ -1,3 +1,5 @@
+/********************* MAIN CONTAINERS CSS *************************/
+
 body {
   margin: 0;
   padding: 0;
@@ -25,6 +27,8 @@ body {
   gap: 40px;
   box-sizing: border-box;
 }
+
+/********************* NAVBAR AND IT'S BUTTONS *************************/
 
 .navbar {
   display: flex;
@@ -138,7 +142,6 @@ input:checked + .slider:before {
   transform: translateY(-26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -170,6 +173,9 @@ input:checked + .slider.red {
 input:checked + .slider.red {
   background-color: rgb(37, 53, 126);
 }
+
+
+/********************* PAGE CONTENT *************************/
 
 .content {
   flex: 1;
@@ -257,6 +263,8 @@ input:checked + .slider.red {
   cursor: pointer;
 }
 
+
+/********************* FOR TABLETS AND PHONES *************************/
 
 @media (max-width: 1366px) {
   * {
@@ -396,7 +404,7 @@ input:checked + .slider.red {
   }
 
   .navbar-icon {
-    width: 30px;
+    width: 40px;
   }
 
   .project-details {
