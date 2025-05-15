@@ -39,10 +39,39 @@ body {
   margin: 0;
 }
 
+.icon-link {
+  position: relative;
+  display: inline-block;
+}
+
 .navbar-icon {
   width: 35px;
   height: auto;
   padding: 5px;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 3px solid black;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  margin-left: 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.icon-link:hover .hover-text {
+  opacity: 1;
 }
 
 .logo {
@@ -53,6 +82,93 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 60px;
+  margin: 9px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s cubic-bezier(0,1,0.5,1);
+  border-radius: 4px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s cubic-bezier(0,1,0.5,1);
+  border-radius: 3px;
+}
+
+input:checked + .slider {
+  background-color: #52c944;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 4px #7efa70;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateY(-26px);
+  -ms-transform: translateY(-26px);
+  transform: translateY(-26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+input:checked + .slider.red {
+  background-color: rgb(37, 53, 126);
+}
+
+input:focus + .slider.red {
+  box-shadow: 0 0 4px rgb(37, 53, 126);
+}
+
+input:checked + .slider.red {
+  background-color: rgb(37, 53, 126);
+}
+
+#round {
+  border-radius: 34px;
+}
+
+#round:before {
+  border-radius: 50%;
+}
+
+input:checked + .slider.red {
+  background-color: rgb(37, 53, 126);
 }
 
 .content {
@@ -213,6 +329,14 @@ body {
   .wrapper {
     border: 4px solid black;
   }
+
+  .icon-link:hover .hover-text {
+  opacity: 0;
+}
+
+.switch {
+    display: none;
+}
 }
 
 @media (max-width: 600px) {
@@ -286,6 +410,13 @@ body {
   .wrapper {
     border: 3px solid black;
   }
+
+  .icon-link:hover .hover-text {
+  opacity: 0;
+}
+.switch {
+    display: none;
+}
 }
 
 
